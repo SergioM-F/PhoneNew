@@ -19,7 +19,7 @@ class PhoneViewModel(application: Application): AndroidViewModel(application) {
         repository = Repository(phoneApi, phoneDataBase)
     }
     fun getPhone() = viewModelScope.launch {
-        repository.getPhones()
+        repository.loadPhone()
     }
     fun phoneIdLiveData (id: Int) = repository.getPhones(id)
 }

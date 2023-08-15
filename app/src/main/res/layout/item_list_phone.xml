@@ -34,11 +34,13 @@
 
             <TextView
                 android:id="@+id/textViewName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
                 android:text="@string/name_phone"
-                android:textSize="24sp"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/imageViewTerreno"
                 app:layout_constraintStart_toStartOf="@+id/imageViewTerreno"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewTerreno" />
@@ -49,7 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/price_phone"
-                android:textSize="20sp"
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/textViewName"
                 app:layout_constraintStart_toStartOf="@+id/textViewName"
                 app:layout_constraintTop_toBottomOf="@+id/textViewName" />

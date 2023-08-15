@@ -23,6 +23,8 @@ class Repository(private val phoneApi: PhoneApi, private val phoneDao: PhoneDao)
 
         }
     }
+
+    fun getPhones(id: Int): LiveData<PhoneEntity> = phoneDao.getPhones(id)
 }
 fun PhoneList.convert(): PhoneEntity =
     PhoneEntity(this.id, this.name, this.price, this.image)

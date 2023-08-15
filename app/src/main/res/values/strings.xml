@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Phone New</string>
+    <string name="id">Id</string>
+    <string name="name_phone">Name Phone</string>
+    <string name="price_phone">Price Phone</string>
+    <string name="image_phone">Image Phone</string>
+    <string name="description_phone">Description Phone</string>
+    <string name="lastprice_phone">Last Price Phone</string>
+    <string name="credit_phone">Credit Phone</string>
+    <string name="image_phone_list">Image Phone List</string>
+    <string name="image_phone_details">Image Phone Details</string>
+    <string name="send_mail">Send eMail</string>
+
+
+
+
+
+
+
+
+
+
+
 </resources>

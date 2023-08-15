@@ -7,6 +7,8 @@ import cl.samf.phonenew.data.local.PhoneEntity
 import cl.samf.phonenew.databinding.ActivityMainBinding
 import cl.samf.phonenew.databinding.ItemListPhoneBinding
 import coil.load
+import java.text.NumberFormat
+import java.util.Locale
 
 class AdapterPhone: RecyclerView.Adapter<AdapterPhone.PhoneViewHolder>() {
 
@@ -32,7 +34,11 @@ class AdapterPhone: RecyclerView.Adapter<AdapterPhone.PhoneViewHolder>() {
         fun bind(phone: PhoneEntity) {
             binding.imageViewTerreno.load(phone.image)
             binding.textViewName.text = phone.name
-            binding.textViewPrice.text = phone.price.toString()
+
+            val chileLocale = Locale ("es", "CL")
+            val numberFormat = NumberFormat.getNumberInstance(chileLocale)
+            val formattedPrice = numberFormat.format(phone.price)
+            binding.textViewPrice.text = "$$formattedPrice"
 
         }
 

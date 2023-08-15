@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 data class PhoneEntity(
     @PrimaryKey val id: Int,
     val name: String,
-    val price: Int,
+    val price: Double,
     val image: String
 )

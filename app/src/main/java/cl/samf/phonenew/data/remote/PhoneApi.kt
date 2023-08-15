@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface PhoneApi {
 
     @GET("products")
-    suspend fun getData(): Response<PhoneList>
+    suspend fun getData(): Response<List<PhoneList>>
 
 }

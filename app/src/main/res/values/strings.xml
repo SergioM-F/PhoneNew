@@ -10,6 +10,7 @@
     <string name="image_phone_list">Image Phone List</string>
     <string name="image_phone_details">Image Phone Details</string>
     <string name="send_mail">Send eMail</string>
+    <string name="details_phone">Detail Phone</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

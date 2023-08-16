@@ -9,5 +9,18 @@
         android:id="@+id/phoneListFragment"
         android:name="cl.samf.phonenew.presentation.PhoneListFragment"
         android:label="fragment_phone_list"
-        tools:layout="@layout/fragment_phone_list" />
+        tools:layout="@layout/fragment_phone_list" >
+        <action
+            android:id="@+id/action_phoneListFragment_to_phoneDetailsFragment"
+            app:destination="@id/phoneDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneDetailsFragment"
+        android:name="cl.samf.phonenew.presentation.PhoneDetailsFragment"
+        android:label="fragment_phone_details"
+        tools:layout="@layout/fragment_phone_details" >
+        <action
+            android:id="@+id/action_phoneDetailsFragment_to_phoneListFragment"
+            app:destination="@id/phoneListFragment" />
+    </fragment>
 </navigation>

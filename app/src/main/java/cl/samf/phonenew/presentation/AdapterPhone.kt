@@ -1,8 +1,11 @@
 package cl.samf.phonenew.presentation
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import cl.samf.phonenew.R
 import cl.samf.phonenew.data.local.PhoneEntity
 import cl.samf.phonenew.databinding.ActivityMainBinding
 import cl.samf.phonenew.databinding.ItemListPhoneBinding
@@ -39,6 +42,12 @@ class AdapterPhone: RecyclerView.Adapter<AdapterPhone.PhoneViewHolder>() {
             val numberFormat = NumberFormat.getNumberInstance(chileLocale)
             val formattedPrice = numberFormat.format(phone.price)
             binding.textViewPrice.text = "$$formattedPrice"
+
+            binding.imageViewTerreno.setOnClickListener{
+                val bundle = Bundle()
+                bundle.putInt("id", phone.id)
+                Navigation.findNavController(binding.root).navigate(R.id.action_phoneListFragment_to_phoneDetailsFragment, bundle)
+            }
 
         }
 

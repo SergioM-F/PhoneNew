@@ -13,6 +13,10 @@ class PhoneViewModel(application: Application): AndroidViewModel(application) {
     private val repository : Repository
 
     fun phoneLiveData() = repository.getPhones()
+
+    fun phoneIdLiveData (id: Int) = repository.getDetailsIdPhones(id)
+
+
     init {
         val phoneApi = PhoneRetrofit.getRetrofitClient()
         val phoneDataBase = PhoneDataBase.getDataBase(application).getPhoneDao()
@@ -21,5 +25,9 @@ class PhoneViewModel(application: Application): AndroidViewModel(application) {
     fun getPhone() = viewModelScope.launch {
         repository.loadPhone()
     }
-    fun phoneIdLiveData (id: Int) = repository.getPhones(id)
+
+    fun getDetailsPhone(id: Int) = viewModelScope.launch {
+        repository.detailsPhone(id)
+    }
+
 }

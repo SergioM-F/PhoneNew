@@ -19,6 +19,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/textViewTitleDetails"
             android:layout_width="match_parent"
@@ -26,75 +32,80 @@
             android:gravity="center_horizontal"
             android:text="@string/name_phone"
             android:textColor="@color/primary_text"
-            android:textSize="24sp" />
-    </ScrollView>
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/description_phone"
-        android:textColor="@color/primary_text"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewDetails"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewDetails" />
+        <ImageView
+            android:id="@+id/imageViewDetails"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
+            android:contentDescription="@string/image_phone_details"
+            android:src="@drawable/baseline_phone_android_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleDetails" />
 
-    <ImageView
-        android:id="@+id/imageViewDetails"
-        android:layout_width="237dp"
-        android:layout_height="298dp"
-        android:layout_marginTop="100dp"
-        android:src="@tools:sample/avatars"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scrollViewDetails"
-        tools:ignore="ImageContrastCheck"
-        android:contentDescription="@string/image_phone_details" />
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/description_phone"
+            android:textColor="@color/primary_text"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewDetails"
+            app:layout_constraintStart_toStartOf="@+id/imageViewDetails"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDetails"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textViewLastPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/lastprice_phone"
-        android:textColor="@color/secondary_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewDetails"
-        app:layout_constraintTop_toTopOf="@+id/imageViewDetails" />
+        <TextView
+            android:id="@+id/textViewLastPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/lastprice_phone"
+            android:textColor="@color/secondary_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetails"
+            app:layout_constraintTop_toTopOf="@+id/imageViewDetails" />
 
-    <TextView
-        android:id="@+id/textViewPriceDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/price_phone"
-        android:textColor="@color/primary_text"
-        app:layout_constraintEnd_toEndOf="@+id/textViewLastPrice"
-        app:layout_constraintStart_toStartOf="@+id/textViewLastPrice"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLastPrice" />
+        <TextView
+            android:id="@+id/textViewPriceDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/price_phone"
+            android:textColor="@color/primary_text"
+            app:layout_constraintEnd_toEndOf="@+id/textViewLastPrice"
+            app:layout_constraintStart_toStartOf="@+id/textViewLastPrice"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLastPrice" />
 
-    <TextView
-        android:id="@+id/textViewCreditDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/credit_phone"
-        android:textColor="@color/secondary_text"
-        app:layout_constraintEnd_toEndOf="@+id/textViewPriceDetails"
-        app:layout_constraintStart_toStartOf="@+id/textViewPriceDetails"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPriceDetails" />
+        <TextView
+            android:id="@+id/textViewCreditDetails"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/credit_phone"
+            android:textColor="@color/secondary_text"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPriceDetails"
+            app:layout_constraintStart_toStartOf="@+id/textViewPriceDetails"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPriceDetails" />
 
-    <ImageView
-        android:id="@+id/imageViewCardTarget"
-        android:layout_width="37dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/baseline_credit_score_24"
-        app:layout_constraintEnd_toEndOf="@+id/textViewCreditDetails"
-        app:layout_constraintStart_toStartOf="@+id/textViewCreditDetails"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCreditDetails"
-        android:contentDescription="@string/credit_phone" />
+        <ImageView
+            android:id="@+id/imageViewCardTarget"
+            android:layout_width="37dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/credit_phone"
+            android:src="@drawable/baseline_credit_score_24"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCreditDetails"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewCreditDetails"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCreditDetails" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"

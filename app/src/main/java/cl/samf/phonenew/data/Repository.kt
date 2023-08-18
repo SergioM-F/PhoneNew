@@ -7,7 +7,7 @@ import cl.samf.phonenew.data.local.PhoneDao
 import cl.samf.phonenew.data.local.PhoneEntity
 import cl.samf.phonenew.data.remote.DetailsPhone
 import cl.samf.phonenew.data.remote.PhoneApi
-import cl.samf.phonenew.data.remote.PhoneList
+
 
 class Repository(private val phoneApi: PhoneApi, private val phoneDao: PhoneDao) {
 
@@ -51,8 +51,7 @@ class Repository(private val phoneApi: PhoneApi, private val phoneDao: PhoneDao)
 
 }
 
-fun PhoneList.convert(): PhoneEntity =
-    PhoneEntity(this.id, this.name, this.price, this.image)
+
 
 fun DetailsPhone.convertDetails(): DetailsPhoneEntity =
     DetailsPhoneEntity(

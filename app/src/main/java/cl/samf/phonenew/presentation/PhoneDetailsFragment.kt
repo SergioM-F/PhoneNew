@@ -50,9 +50,10 @@ class PhoneDetailsFragment : Fragment() {
 
 
         phoneViewModel.phoneIdLiveData(param1!!.toInt()).observe(viewLifecycleOwner) {
-            val name = it.name
-            val id = it.id.toString()
+
             if (it != null) {
+                val name = it.name
+                val id = it.id.toString()
                 binding.textViewTitleDetails.text = it.name
                 binding.imageViewDetails.load(it.image)
                 binding.textViewDescription.text = it.description
